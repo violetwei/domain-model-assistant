@@ -59,6 +59,11 @@ public class ClassDiagram : MonoBehaviour, BaseComponent
         this.associations.Add(association);
     }
 
+    public void Destroy()
+    {
+        Destroy(this.gameObject);
+    }
+
     void SpawnPopupMenu()
     {
         this.popup_menu = GameObject.Instantiate(this.popup_menu_prefab);

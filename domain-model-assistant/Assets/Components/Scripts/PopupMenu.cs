@@ -22,9 +22,11 @@ public class PopupMenu : MonoBehaviour
         this.associatedObject = classDiagram.gameObject;
         this.transform.GetChild(0).GetComponent<UnityEngine.UI.Button>().onClick.AddListener(classDiagram.AddAttribute);
         this.transform.GetChild(1).GetComponent<UnityEngine.UI.Button>().onClick.AddListener(classDiagram.AddSubclass);
+        this.transform.GetChild(2).GetComponent<UnityEngine.UI.Button>().onClick.AddListener(classDiagram.Destroy);
+
     }
 
-    
+
 
     public void Destroy()
     {
