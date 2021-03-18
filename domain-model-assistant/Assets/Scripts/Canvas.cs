@@ -54,6 +54,14 @@ public class Canvas : MonoBehaviour, IPointerClickHandler
         return diagram;
     }
 
+    public GameObject DeleteClassDiagram(Vector2 position, GameObject prefab)
+    {
+        GameObject diagram = Instantiate(prefab, this.transform);
+        diagram.transform.position = position;
+        classDiagramList.Add(diagram);
+        return diagram;
+    }
+
     void Zoom()
     {
         if (Input.touchSupported)

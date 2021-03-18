@@ -59,7 +59,7 @@ public class ClassDiagram : MonoBehaviour, BaseComponent
         this.associations.Add(association);
     }
 
-    public void Destroy()
+    public void Destroy() //destroy class diagram when click on delete class
     {
         Destroy(this.gameObject);
     }
