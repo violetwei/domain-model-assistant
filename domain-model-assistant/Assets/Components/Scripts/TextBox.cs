@@ -7,6 +7,7 @@ public class TextBox : MonoBehaviour
 {
 
     public GameObject sect;
+    public string attribute_string;
     public string ID
     { get; set; }
 
@@ -38,7 +39,13 @@ public class TextBox : MonoBehaviour
         {
             inputField = gameObject.AddComponent<InputField>();
         }
-        inputField.text = text;
+        attribute_string = attribute_string + "\n" + text;
+        inputField.text = attribute_string;
+        return true;
+    }
+
+    public bool createNewTextBox() {
+        gameObject.AddComponent<InputField>();
         return true;
     }
 

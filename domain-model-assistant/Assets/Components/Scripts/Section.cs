@@ -60,6 +60,7 @@ public class Section : MonoBehaviour
     public void AddAttribute()
     {
         var TB = GameObject.Instantiate(textB, this.transform);
+        //TB.GetComponent<TextBox>().createNewTextBox();
         TB.GetComponent<TextBox>().SetText("Enter attribute");
         TB.transform.position = this.transform.position; 
         this.AddTextBox(TB);

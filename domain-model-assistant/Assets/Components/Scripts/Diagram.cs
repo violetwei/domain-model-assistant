@@ -222,7 +222,7 @@ public class Diagram : MonoBehaviour
         sect.GetComponent<Section>().AddAttribute(attr._id, attr.name, attr.type);
       }
     } else {
-      Debug.log("Cannot add the attributes to the second section.")
+      Debug.Log("Cannot add the attributes to the second section.");
     }
   }
 
