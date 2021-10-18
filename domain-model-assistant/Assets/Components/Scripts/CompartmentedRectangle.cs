@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class CompartmentedRectangle : Node
 {
     
+    public bool isHighlighted = true;
     public GameObject textbox;
     public GameObject section;
     public List<GameObject> sections = new List<GameObject>();
@@ -37,6 +38,10 @@ public class CompartmentedRectangle : Node
         if (this.hold)
         {
             OnBeginHold();
+        }
+        if (this.isHighlighted == true)
+        {
+            this.GetComponent<Renderer>().material.color = Color.blue;
         }
         
     }
@@ -128,6 +133,8 @@ public class CompartmentedRectangle : Node
     public Vector2 GetPosition(){
         return this.transform.position;
     }
+
+
 
     // ************ END UI model Methods for Compartmented Rectangle ****************//
 

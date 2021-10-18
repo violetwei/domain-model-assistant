@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 660314544249708028}
   - component: {fileID: 2934163152826966153}
   - component: {fileID: 4946688021152192847}
+  - component: {fileID: 2769540092007925871}
   m_Layer: 5
   m_Name: CompartmentedRectangle
   m_TagString: Untagged
@@ -270,6 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
   header: {fileID: 7945400382653598254, guid: 8d7b1debeaab24b41a5d839bab6b480f, type: 3}
+  isHighlighted: 1
   textbox: {fileID: 7945400382653598254, guid: 8d7b1debeaab24b41a5d839bab6b480f, type: 3}
   section: {fileID: 8699455690723162231, guid: 1396b8a5385e3cd4ca1b245b6b8891d1, type: 3}
   sections: []
@@ -332,3 +334,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a0451eb292d0f44183251fbbfe077e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &2769540092007925871
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4578845948308175784}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
