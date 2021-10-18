@@ -48,7 +48,8 @@ public class Section : MonoBehaviour
         return true;
     }
 
-    public GameObject GetTextBox(int index){
+    public GameObject GetTextBox(int index)
+    {
         if(index >= 0 && index < textBList.Capacity -1){
             return this.textBList[index];
         }else{
@@ -64,7 +65,8 @@ public class Section : MonoBehaviour
         this.AddTextBox(TB);
     }
 
-    public void AddAttribute(string _id, string name, string type){
+    public void AddAttribute(string _id, string name, string type)
+    {
         var TB = GameObject.Instantiate(textB, this.transform);
         TB.GetComponent<TextBox>().ID = _id;
         string s = TB.GetComponent<TextBox>().GetTextWithNameType(name, type);

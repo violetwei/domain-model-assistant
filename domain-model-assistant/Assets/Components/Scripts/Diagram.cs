@@ -214,13 +214,15 @@ public class Diagram : MonoBehaviour
 
   public void AddAttributes(GameObject sect, int i){
     int first = 0;
-    if(i == first){
+    if (i == first) { // attributes are stored in the first section only
       var compId = sect.GetComponent<Section>().GetCompartmentedRectangle()
                       .GetComponent<CompartmentedRectangle>().ID;
       foreach(var attr in idsToClassesAndAttributes[compId]){
         Debug.Log("Attribute "+ attr._id+":"+"name=" + attr.name +"type="+ attr.type);
-          sect.GetComponent<Section>().AddAttribute(attr._id, attr.name, attr.type);
+        sect.GetComponent<Section>().AddAttribute(attr._id, attr.name, attr.type);
       }
+    } else {
+      Debug.log("Cannot add the attributes to the second section.")
     }
   }
 

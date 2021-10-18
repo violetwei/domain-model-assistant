@@ -20,7 +20,8 @@ public class Class
     public string eClass;
     public string _id;
     public string name;
-     public List<Attribute> attributes;
+    // 0-to-many attributes
+    public List<Attribute> attributes;
 }
 
 [System.Serializable]
@@ -43,8 +44,8 @@ public class Attribute
     public string _id;
     public string name;
     public string type;
-
 }
+
 [System.Serializable]
 public class ContainerMap
 {
