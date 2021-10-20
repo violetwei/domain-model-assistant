@@ -41,7 +41,12 @@ public class CompartmentedRectangle : Node
         }
         if (this.isHighlighted == true)
         {
-            this.GetComponent<Renderer>().material.color = Color.blue;
+            // this.gameObject.GetComponent<Header>().GetComponent<ClassTitle>().GetComponent<Text>().color = Color.red;
+            // string newText = "" + this.GetChild(0).GetChild(0).GetText();
+            // this.transform.GetChild(0).GetChild(0).SetText(newText).color = Color.red;
+            //this.transform.GetComponent<Renderer>().material.color = Color.blue;
+             this.gameObject.GetComponent<Header>().GetComponent<ClassTitle>().GetComponent<Text>().color = Color.red;
+
         }
         
     }
