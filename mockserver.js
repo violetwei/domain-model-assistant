@@ -28,10 +28,13 @@ app.use(cors(corsOptions)) // Use this after the variable declaration
 const SUCCESS = 200;
 const PORT = 8080;
 
+const CDM_NAME = "MULTIPLE_CLASSES";
+
+
 var classDiagram = {
   "eClass": "http://cs.mcgill.ca/sel/cdm/1.0#//ClassDiagram",
   "_id": "100",
-  "name": "MULTIPLE_CLASSES",
+  "name": CDM_NAME,
   "classes": [
     {
       "eClass": "http://cs.mcgill.ca/sel/cdm/1.0#//Class",
@@ -206,8 +209,41 @@ app.delete('/classdiagram/MULTIPLE_CLASSES/class/:class_id', (req, res) => {
   res.sendStatus(SUCCESS);
 });
 
+// Give feedback (work in progress)
+app.get("/classdiagram/:cdmName/feedback", (req, res) => {
+  
+});
+
+/** Gets the item with the given _id by recursing into the iterable. */
+function getById(id, iterable) {
+  if (Array.isArray(iterable)) {
+    for (var item of iterable) {
+      if (id == item["_id"]) {
+        return item;
+      } else {
+        result = getById(id, item);
+        if (result) {
+          return result;
+        }
+      }
+    }
+  } else if (typeof iterable === "object") {
+    for (var key in iterable) {
+      if (key == "_id" && id == iterable[key]) {
+        return iterable;
+      } else {
+        result = getById(id, iterable[key]);
+        if (result) {
+          return result;
+        }
+      }
+    }
+  }
+  return null;
+}
+
 var server = app.listen(PORT, () => {
   var host = server.address().address
   var port = server.address().port
-  console.log("Example app listening at http://%s:%s", host, port)
+  console.log(`Mock WebCORE app listening at http://${host}:${port}`);
 });
